@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>{{days}} business days until {{what}}</title>
+<style>
+body {
+  font-family: courier;
+  background-color: #a1a1a1;
+}
+p {
+  font-size: 12vw;
+}
+p span {
+  font-weight: bold;
+  font-size: 14vw;
+  color: #e9ab17;
+}
+</style>
+</head>
+<body>
+{% if url %}
+<iframe src="{{url}}"></iframe>
+{% else %}
+<form action="/" method="GET">
+  Enter a URL to load in an IFRAME: 
+  <input name="url" placeholder="https://...">
+  <input type="submit">
+</form>
+{% endif %}
+</body>
+</html>
